@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
+  server: 172.64.80.1
+  port: 443
+  udp: true
+  type: vless
+  uuid: a8890c1b-3622-3106-c4be-d8671be32d2b
+  tls: true
+  servername: summer-meadow-af5b.woowoorrrkk.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: summer-meadow-af5b.woowoorrrkk.workers.dev
+- name: 🇸🇨 塞舌尔 (Seychelles) 02 - xiaohe
   server: 64.49.38.3
   port: 8443
   udp: true
@@ -14,11 +29,11 @@ proxies:
   reality-opts:
     public-key: 92KJ-ibs1qTy8nODGrHTW8T0b_trG7McLYv8My9o2EE
   servername: download.autodesk.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
-- name: 🇸🇨 塞舌尔 (Seychelles) 02 - xiaohe
+- name: 🇸🇨 塞舌尔 (Seychelles) 03 - xiaohe
   server: 156.226.168.221
   port: 35193
   udp: true
@@ -31,25 +46,6 @@ proxies:
     short-id: e8daed2d
   servername: www.apple.com
   client-fingerprint: ios
-- name: 🇸🇨 塞舌尔 (Seychelles) 03 - xiaohe
-  server: 138.124.0.168
-  port: 8080
-  udp: true
-  type: hysteria2
-  password: h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT
-  sni: hopp-legend-se.roxa.org
-  skip-cert-verify: false
-- name: 🇸🇨 塞舌尔 (Seychelles) 04 - xiaohe
-  server: 45.130.125.75
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
 proxy-groups:
 - name: PROXIES
   type: select
@@ -58,7 +54,6 @@ proxy-groups:
   - 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
   - 🇸🇨 塞舌尔 (Seychelles) 02 - xiaohe
   - 🇸🇨 塞舌尔 (Seychelles) 03 - xiaohe
-  - 🇸🇨 塞舌尔 (Seychelles) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -67,6 +62,5 @@ proxy-groups:
   - 🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe
   - 🇸🇨 塞舌尔 (Seychelles) 02 - xiaohe
   - 🇸🇨 塞舌尔 (Seychelles) 03 - xiaohe
-  - 🇸🇨 塞舌尔 (Seychelles) 04 - xiaohe
 rules:
 - MATCH,PROXIES
