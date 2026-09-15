@@ -5,13 +5,53 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  server: 172.67.130.246
+  port: 443
+  udp: true
+  type: trojan
+  password: Telegram_healer_config
+  sni: 3OQxS5h6kCscecND.ZMh9KCGos2cq55uh6qDYaa938a5UgB.wOrkERS.dEV
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tr/zMUJnc0O87fJR02xzGNed?ed=2560
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  server: 195.133.5.102
+  port: 7018
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 895b4b796a357570
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  server: 195.133.23.200
+  port: 7018
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 81a20429165df87e
+- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  server: 195.58.48.137
+  port: 7018
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 8ad9d72a5571df86
+- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
   server: 130.49.189.158
   port: 43558
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: /QFycb02d87cByC9+5ZRSygI1avHiPXkgYG2yc+TnGA=
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  server: srv-17e124.21freedom.net
+  port: 11592
+  udp: true
+  type: hysteria2
+  password: 41edb44c8e
+  sni: 'off'
+  skip-cert-verify: true
+- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
   server: msk.frkn.org
   port: 443
   udp: true
@@ -19,6 +59,13 @@ proxies:
   password: f317b5d6-d399-4d3d-a051-89d674ae953c
   sni: msk.frkn.org
   skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
+  server: 194.87.196.13
+  port: 7018
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 4938e975724d0ed1
 proxy-groups:
 - name: PROXIES
   type: select
@@ -26,6 +73,12 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -33,5 +86,11 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
 rules:
 - MATCH,PROXIES
