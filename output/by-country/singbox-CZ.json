@@ -5,22 +5,27 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇬🇹 GT 01 - xiaohe",
-      "server": "185.47.254.251",
+      "tag": "🇨🇿 捷克 (Czech) 01 - xiaohe",
+      "server": "104.17.147.22",
       "server_port": 443,
-      "uuid": "878fb7f7-fc65-465e-a352-17c7216c6f3d",
-      "flow": "xtls-rprx-vision",
+      "uuid": "4ccf70f9-7632-4b5a-9557-10d2dd347bb2",
       "tls": {
         "enabled": true,
-        "server_name": "gateway.icloud.com",
+        "server_name": "TO6R63-KKChIGHQM2.VxZ0DDUq7tO7su0cDqF.WoRKeRs.DeV",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q",
-          "short_id": "6c059ecfddf9b179"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/G4J8aNAVZt9KdOjjcfZDFDRI1Obr5E0?ed=2560",
+        "headers": {
+          "Host": "to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev"
         }
       }
     },
@@ -29,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇹 GT 01 - xiaohe"
+        "🇨🇿 捷克 (Czech) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇹 GT 01 - xiaohe"
+        "🇨🇿 捷克 (Czech) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
