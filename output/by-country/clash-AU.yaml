@@ -5,18 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
-  server: 51.161.204.244
-  port: 443
+  server: 129.151.64.169
+  port: 31867
   udp: true
   type: vless
-  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
-  flow: xtls-rprx-vision
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
-  reality-opts:
-    public-key: gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk
-    short-id: 0ad08b47f498efd2
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /files
+    headers:
+      Host: cdn8848.776676.xyz
 - name: 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
   server: 103.75.119.126
   port: 2087
@@ -37,8 +38,21 @@ proxies:
     public-key: fsdIMU2apN1C_NbkL7mHTsBKEfhwbDhgCRcB8ICf03E
     short-id: d725f0dd8cce210f
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
+  server: 51.161.204.244
+  port: 443
+  udp: true
+  type: vless
+  uuid: 36e89875-9c53-482b-bc41-d3890e9da176
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: gCAazs5uxNuMZIxfDdw8wPE0nwKY4QfBfBkQveKAkEk
+    short-id: 0ad08b47f498efd2
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇦🇺 澳大利亚 (Australia) 05 - xiaohe
   server: vpn-au-002.fastervpn.world
   port: 443
   udp: true
@@ -46,8 +60,8 @@ proxies:
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: whatsapp.com
   skip-cert-verify: true
-- name: 🇦🇺 澳大利亚 (Australia) 05 - xiaohe
-  server: 82.198.246.97
+- name: 🇦🇺 澳大利亚 (Australia) 06 - xiaohe
+  server: 82.198.246.250
   port: 180
   udp: true
   type: vmess
@@ -64,6 +78,7 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 05 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -74,5 +89,6 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 05 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 06 - xiaohe
 rules:
 - MATCH,PROXIES
