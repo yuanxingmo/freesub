@@ -4,22 +4,17 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇪 比利时 (Belgium) 01 - xiaohe
-  server: 64.225.110.247
-  port: 2083
+- name: 🇸🇪 瑞典 (Sweden) 01 - xiaohe
+  server: 143.246.195.98
+  port: 8081
   udp: true
   type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
   network: ws
   ws-opts:
-    path: /acg/buy/ajax
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇧🇪 比利时 (Belgium) 02 - xiaohe
-  server: 2.27.244.164
+    path: /vless-test
+- name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
+  server: 202.181.177.8
   port: 8443
   udp: true
   type: vless
@@ -38,14 +33,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇧🇪 比利时 (Belgium) 01 - xiaohe
-  - 🇧🇪 比利时 (Belgium) 02 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇪 比利时 (Belgium) 01 - xiaohe
-  - 🇧🇪 比利时 (Belgium) 02 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 01 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
 rules:
 - MATCH,PROXIES
