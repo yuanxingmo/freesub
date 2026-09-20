@@ -5,6 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  server: 104.21.3.133
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
+  tls: true
+  servername: fans.liverpool.qzz.io
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiY0Y0cENQUmxsNyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: fans.liverpool.qzz.io
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  server: 130.49.189.158
+  port: 43558
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 5dLyPJpSV+QyXFRj+S0dt6xFKHxtcXEkRO/TzJGzryU=
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   server: 91.240.86.70
   port: 22443
   udp: true
@@ -12,22 +34,7 @@ proxies:
   password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
   sni: itsallproxy.quattro-tech.ru
   skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  server: 185.113.223.183
-  port: 8443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /channels/act
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
   server: msk.frkn.org
   port: 443
   udp: true
@@ -35,7 +42,7 @@ proxies:
   password: f317b5d6-d399-4d3d-a051-89d674ae953c
   sni: msk.frkn.org
   skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
   server: 45.12.75.242
   port: 26424
   udp: true
@@ -56,6 +63,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -65,5 +73,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
 rules:
 - MATCH,PROXIES
