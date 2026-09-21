@@ -5,14 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇷 巴西 (Brazil) 01 - xiaohe
-  server: 89.110.66.154
-  port: 443
+  server: 176.124.220.173
+  port: 8443
   udp: true
   type: vless
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: true
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
