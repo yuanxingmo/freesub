@@ -5,68 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: www.speedtest.net
-  port: 443
+  server: 188.114.97.6
+  port: 2052
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /assignment
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
 - name: 🌐 其他地区 (Other) 02 - xiaohe
-  server: www.speedtest.net
-  port: 443
+  server: 188.114.97.6
+  port: 2052
   udp: true
-  type: trojan
-  password: humanity
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-- name: 🌐 其他地区 (Other) 03 - xiaohe
-  server: www.speedtest.net
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /assignment
-- name: 🌐 其他地区 (Other) 04 - xiaohe
-  server: www.speedtest.net
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.ignitelimit.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🌐 其他地区 (Other) 05 - xiaohe
-  server: 104.17.121.71
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🌐 其他地区 (Other) 06 - xiaohe
-  server: 104.21.13.204
-  port: 443
-  udp: true
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /assignment
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
@@ -74,10 +33,6 @@ proxy-groups:
   - AUTO
   - 🌐 其他地区 (Other) 01 - xiaohe
   - 🌐 其他地区 (Other) 02 - xiaohe
-  - 🌐 其他地区 (Other) 03 - xiaohe
-  - 🌐 其他地区 (Other) 04 - xiaohe
-  - 🌐 其他地区 (Other) 05 - xiaohe
-  - 🌐 其他地区 (Other) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -85,9 +40,5 @@ proxy-groups:
   proxies:
   - 🌐 其他地区 (Other) 01 - xiaohe
   - 🌐 其他地区 (Other) 02 - xiaohe
-  - 🌐 其他地区 (Other) 03 - xiaohe
-  - 🌐 其他地区 (Other) 04 - xiaohe
-  - 🌐 其他地区 (Other) 05 - xiaohe
-  - 🌐 其他地区 (Other) 06 - xiaohe
 rules:
 - MATCH,PROXIES
