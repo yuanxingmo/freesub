@@ -6,10 +6,10 @@
     {
       "type": "shadowsocks",
       "tag": "🇪🇸 西班牙 (Spain) 01 - xiaohe",
-      "server": "140.174.184.5",
+      "server": "108.181.121.226",
       "server_port": 8388,
       "method": "chacha20-ietf-poly1305",
-      "password": "qItG8SueYQcP"
+      "password": "WSyL4XTwNsdv"
     },
     {
       "type": "vless",
@@ -22,7 +22,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -40,13 +40,22 @@
       "security": "auto"
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇪🇸 西班牙 (Spain) 04 - xiaohe",
+      "server": "140.174.184.5",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "qItG8SueYQcP"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇪🇸 西班牙 (Spain) 01 - xiaohe",
         "🇪🇸 西班牙 (Spain) 02 - xiaohe",
-        "🇪🇸 西班牙 (Spain) 03 - xiaohe"
+        "🇪🇸 西班牙 (Spain) 03 - xiaohe",
+        "🇪🇸 西班牙 (Spain) 04 - xiaohe"
       ]
     },
     {
@@ -55,7 +64,8 @@
       "outbounds": [
         "🇪🇸 西班牙 (Spain) 01 - xiaohe",
         "🇪🇸 西班牙 (Spain) 02 - xiaohe",
-        "🇪🇸 西班牙 (Spain) 03 - xiaohe"
+        "🇪🇸 西班牙 (Spain) 03 - xiaohe",
+        "🇪🇸 西班牙 (Spain) 04 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
