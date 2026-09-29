@@ -5,48 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe
-  server: 104.21.12.21
-  port: 443
+  server: 162.159.0.169
+  port: 2095
   udp: true
   type: vless
-  uuid: 73796e63-0000-4000-8000-000000000000
-  tls: true
-  servername: nahan-core.fatitelegram.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /sync
+    path: /?ed=2560security=tls
     headers:
-      Host: nahan-core.fatitelegram.workers.dev
-- name: 🇯🇵 日本 (Japan) 02 (家宽) - xiaohe
-  server: 116.204.164.5
-  port: 7443
-  udp: true
-  type: vless
-  uuid: 2416ff70-cb17-4cdc-834d-a89c00261e01
-  tls: true
-  servername: o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: o-85ley6knn8ut.6nvkygqh144t7xtdyvh0y3o4gzo3ujhnk8n.workers.dev
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe
-  - 🇯🇵 日本 (Japan) 02 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe
-  - 🇯🇵 日本 (Japan) 02 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES

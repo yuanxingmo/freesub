@@ -6,26 +6,6 @@
     {
       "type": "vless",
       "tag": "🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe",
-      "server": "94.249.225.106",
-      "server_port": 443,
-      "uuid": "ca5ffe64-81e0-42f0-a136-03cc4f662a4f",
-      "tls": {
-        "enabled": true,
-        "server_name": "thnet.krusofiya.fun",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "oFuK9Xldbcr064LYxzvc-wGEQpdTs5J3ybFuOXlW0SQ",
-          "short_id": "8fffb104368e75d5"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe",
       "server": "94.183.170.147",
       "server_port": 8443,
       "uuid": "66ac188b-bd8d-4218-b9ba-0bad0e152cd0",
@@ -45,6 +25,17 @@
       "transport": {
         "type": "grpc",
         "service_name": "9d30d49278"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe",
+      "server": "94.183.170.135",
+      "server_port": 443,
+      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
+      "transport": {
+        "type": "ws",
+        "path": "/"
       }
     },
     {
