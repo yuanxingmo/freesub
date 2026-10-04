@@ -15,7 +15,7 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -28,10 +28,7 @@
       "tls": {
         "enabled": true,
         "server_name": "fdghyt.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ]
+        "insecure": false
       },
       "transport": {
         "type": "ws",
